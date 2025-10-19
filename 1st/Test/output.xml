@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.3.2 (Python 3.12.10 on win32)" generated="2025-10-17T22:57:58.752240" rpa="false" schemaversion="5">
+<suite id="s1" name="Test1" source="E:\Education\new era\TKH\Year 2\ES Content\Ass\1st\Test\test1.robot">
+<kw name="Open Arduino" owner="ArduinoLibrary" type="SETUP">
+<status status="PASS" start="2025-10-17T22:57:58.823421" elapsed="2.002971"/>
+</kw>
+<test id="s1-t1" name="Test 0 - Arduino System Ready" line="7">
+<kw name="Wait For Ready" owner="ArduinoLibrary">
+<msg time="2025-10-17T22:58:00.827405" level="FAIL">Arduino not opened</msg>
+<status status="FAIL" start="2025-10-17T22:58:00.827405" elapsed="0.001000">Arduino not opened</status>
+</kw>
+<status status="FAIL" start="2025-10-17T22:58:00.826392" elapsed="0.003014">Arduino not opened</status>
+</test>
+<test id="s1-t2" name="Test 1 - LED ON Command" line="10">
+<kw name="Send Command" owner="ArduinoLibrary">
+<msg time="2025-10-17T22:58:00.831408" level="FAIL">Arduino not opened</msg>
+<var>${lines}</var>
+<arg>on</arg>
+<status status="FAIL" start="2025-10-17T22:58:00.830406" elapsed="0.001002">Arduino not opened</status>
+</kw>
+<kw name="Should Contain" owner="BuiltIn">
+<arg>${lines}</arg>
+<arg>LED turned ON</arg>
+<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
+<status status="NOT RUN" start="2025-10-17T22:58:00.831408" elapsed="0.000998"/>
+</kw>
+<status status="FAIL" start="2025-10-17T22:58:00.830406" elapsed="0.002000">Arduino not opened</status>
+</test>
+<test id="s1-t3" name="Test 2 - LED OFF Command" line="14">
+<kw name="Send Command" owner="ArduinoLibrary">
+<msg time="2025-10-17T22:58:00.834500" level="FAIL">Arduino not opened</msg>
+<var>${lines}</var>
+<arg>of</arg>
+<status status="FAIL" start="2025-10-17T22:58:00.834500" elapsed="0.001001">Arduino not opened</status>
+</kw>
+<kw name="Should Contain" owner="BuiltIn">
+<arg>${lines}</arg>
+<arg>LED turned OFF</arg>
+<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
+<status status="NOT RUN" start="2025-10-17T22:58:00.835501" elapsed="0.000000"/>
+</kw>
+<status status="FAIL" start="2025-10-17T22:58:00.834500" elapsed="0.001001">Arduino not opened</status>
+</test>
+<test id="s1-t4" name="Test 3 - Invalid Command" line="18">
+<kw name="Send Command" owner="ArduinoLibrary">
+<msg time="2025-10-17T22:58:00.836499" level="FAIL">Arduino not opened</msg>
+<var>${lines}</var>
+<arg>pff</arg>
+<status status="FAIL" start="2025-10-17T22:58:00.836499" elapsed="0.000000">Arduino not opened</status>
+</kw>
+<kw name="Should Contain" owner="BuiltIn">
+<arg>${lines}</arg>
+<arg>Invalid command</arg>
+<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
+<status status="NOT RUN" start="2025-10-17T22:58:00.836499" elapsed="0.001021"/>
+</kw>
+<status status="FAIL" start="2025-10-17T22:58:00.836499" elapsed="0.001021">Arduino not opened</status>
+</test>
+<test id="s1-t5" name="Test 4 - Pushbutton Pressed" line="22">
+<kw name="Prompt User">
+<kw name="Run Keyword" owner="BuiltIn">
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2025-10-17T22:58:06.278889" level="INFO">Please pressed the pushbutton and press Enter...</msg>
+<arg>input("Please ${state} the pushbutton and press Enter...")</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2025-10-17T22:58:00.838500" elapsed="5.440389"/>
+</kw>
+<arg>Evaluate</arg>
+<arg>input("Please ${state} the pushbutton and press Enter...")</arg>
+<doc>Executes the given keyword with the given arguments.</doc>
+<status status="PASS" start="2025-10-17T22:58:00.838500" elapsed="5.440389"/>
+</kw>
+<arg>pressed</arg>
+<status status="PASS" start="2025-10-17T22:58:00.838500" elapsed="5.440389"/>
+</kw>
+<kw name="Send Command" owner="ArduinoLibrary">
+<msg time="2025-10-17T22:58:06.279881" level="FAIL">Arduino not opened</msg>
+<var>${lines}</var>
+<arg>status</arg>
+<status status="FAIL" start="2025-10-17T22:58:06.278889" elapsed="0.000992">Arduino not opened</status>
+</kw>
+<kw name="Should Contain" owner="BuiltIn">
+<arg>${lines}</arg>
+<arg>BUTTON_PRESSED</arg>
+<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
+<status status="NOT RUN" start="2025-10-17T22:58:06.279881" elapsed="0.000000"/>
+</kw>
+<status status="FAIL" start="2025-10-17T22:58:00.837520" elapsed="5.442361">Arduino not opened</status>
+</test>
+<test id="s1-t6" name="Test 5 - Pushbutton Released" line="27">
+<kw name="Prompt User">
+<kw name="Run Keyword" owner="BuiltIn">
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2025-10-17T22:58:08.076317" level="INFO">Please released the pushbutton and press Enter...</msg>
+<arg>input("Please ${state} the pushbutton and press Enter...")</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2025-10-17T22:58:06.282394" elapsed="1.794924"/>
+</kw>
+<arg>Evaluate</arg>
+<arg>input("Please ${state} the pushbutton and press Enter...")</arg>
+<doc>Executes the given keyword with the given arguments.</doc>
+<status status="PASS" start="2025-10-17T22:58:06.281387" elapsed="1.795931"/>
+</kw>
+<arg>released</arg>
+<status status="PASS" start="2025-10-17T22:58:06.281387" elapsed="1.795931"/>
+</kw>
+<kw name="Send Command" owner="ArduinoLibrary">
+<msg time="2025-10-17T22:58:08.077318" level="FAIL">Arduino not opened</msg>
+<var>${lines}</var>
+<arg>status</arg>
+<status status="FAIL" start="2025-10-17T22:58:08.077318" elapsed="0.001016">Arduino not opened</status>
+</kw>
+<kw name="Should Contain" owner="BuiltIn">
+<arg>${lines}</arg>
+<arg>BUTTON_RELEASED</arg>
+<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
+<status status="NOT RUN" start="2025-10-17T22:58:08.078334" elapsed="0.000000"/>
+</kw>
+<status status="FAIL" start="2025-10-17T22:58:06.281387" elapsed="1.796947">Arduino not opened</status>
+</test>
+<kw name="Close Arduino" owner="ArduinoLibrary" type="TEARDOWN">
+<status status="PASS" start="2025-10-17T22:58:08.079318" elapsed="0.001000"/>
+</kw>
+<status status="FAIL" start="2025-10-17T22:57:58.755285" elapsed="9.325033"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="6" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat name="Test1" id="s1" pass="0" fail="6" skip="0">Test1</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
