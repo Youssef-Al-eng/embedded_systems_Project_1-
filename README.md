@@ -28,7 +28,27 @@ The system allows LED control via both **Push Button** and **Serial Communicatio
 
 ---
 
+---
+
+### 🧰 Requirements
+- Arduino IDE 2.x  
+- AVR-GCC / PlatformIO  
+- PlantUML for design visualization  
+- Python + Robot Framework (for testing)
+
+---
+
+### 🧑‍💻 Author
+**Youssef Alaa**  
+The Knowledge Hub Universities – Embedded Systems Project  
+📅 *October 2025*  
+🏷️ Version: 1.0
+
+---
+
 ### 🧱 System Architecture
+> You can visualize this diagram using **PlantUML** (copy the code below into [PlantText](https://www.planttext.com) or your IDE plugin):
+
 ```plantuml
 @startuml
 main() --> System_Init()
@@ -43,22 +63,4 @@ Loop() --> LED_Update()
 Loop() --> LCD_Display()
 Loop() --> UART_Process()
 @enduml
-
-🧰 Requirements
-
-Arduino IDE 2.x
-
-AVR-GCC / PlatformIO
-
-PlantUML for design visualization
-
-Python + Robot Framework (for testing)
-
-
-🧑‍💻 Author
-
-Youssef Alaa
-The Knowledge Hub Universities – Embedded Systems Project
-📅 October 2025
-🏷️ Version: 1.0
 
